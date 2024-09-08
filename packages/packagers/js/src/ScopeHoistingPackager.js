@@ -865,6 +865,8 @@ ${code}
               referencedBundle?.env.outputFormat === 'esmodule'
                 ? 'default'
                 : '*';
+
+            renamed = external.get(imported);
           } else {
             if (imported === '*') {
               let exportedSymbols = this.bundleGraph.getExportedSymbols(entry);
